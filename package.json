@@ -1,0 +1,33 @@
+{
+  "name": "test_jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoBuitrago/test_jenkins.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoBuitrago/test_jenkins/issues"
+  },
+  "homepage": "https://github.com/DiegoBuitrago/test_jenkins#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.4",
+    "unit.js": "^2.1.1"
+  }
+}
