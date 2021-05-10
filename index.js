@@ -4,12 +4,13 @@ const app = express()
 
 const port = 3000
 
-// app.get('/', (req, res) => {
-//     res.send("hola mundo")
-// })
+app.get('/', (req, res) => {
+    res.send('hola mundo')
+    // res.send("hola mundo")
+})
 
-app.get('/', function (req, res) {
-    res.send("hola mundo");
+app.get('/qw', function (req, res) {
+    res.send("hola mundo Guerrero");
 });
 
 app.listen(port, () => {
