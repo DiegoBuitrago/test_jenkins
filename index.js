@@ -1,15 +1,19 @@
-'use strict';
+const express = require('express')
 
-var fs = require('fs');
-var path = require('path');
+const app = express()
 
-exports.get = function (event, context, callback) {
-    var contents = fs.readFileSync(`public${path.sep}index.html`);
-    var result = {
-        statusCode: 200,
-        body: contents.toString(),
-        headers: { 'content-type': 'text/html' }
-    };
+const port = 3000
 
-    callback(null, result);
-};
+// app.get('/', (req, res) => {
+//     res.send("hola mundo")
+// })
+
+app.get('/', function (req, res) {
+    res.send("hola mundo");
+});
+
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
+
+module.exports = app;
