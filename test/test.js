@@ -19,7 +19,7 @@ describe('Run 2', function() {
         .expect('Content-Type', /text/)
         .expect(200,done)
     });
-    
+
     it('responds with json', function(done) {
         supertest('http://localhost:3000')
         .post('/name')
