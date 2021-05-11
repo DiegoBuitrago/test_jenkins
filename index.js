@@ -27,7 +27,11 @@ app.get('/list', (req, res) => {
         res.sendStatus(500);
     }
 })
-
+/* otro comentario local
+dSASD
+sD
+ADS
+*/
 app.post('/name', (req, res) => {
     if(list.filter(person => person.name == req.body.name) !== undefined){
         res.sendStatus(200);
