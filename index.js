@@ -7,11 +7,15 @@ app.use(express.urlencoded({ extended: true }))
 const port = 3000
 
 let list = [{name:'Diego', age:84}, {name:'Santiago', age:103}, {name:'Guerrero', age:65}]
-
+/* otro comentario local
+dSASD
+sD
+ADS
+*/
 app.get('/', function (req, res) {
     res.send("hola mundo");
 });
-//list
+
 app.get('/list', (req, res) => {
     if(list !== undefined){
         res.sendStatus(200);
