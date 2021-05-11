@@ -5,7 +5,7 @@ pipeline {
         stage('Git') {
             steps {
                 git branch: 'test',
-        url: 'https://github.com/DiegoBuitrago/test_jenkins.git'
+                url: 'https://github.com/DiegoBuitrago/test_jenkins.git'
             }
         }
 
@@ -33,6 +33,8 @@ pipeline {
             sh 'git checkout main'
             sh 'git status'
             sh 'git merge test'
+            sh 'git remote rm origin'
+            sh 'git remote add origin "git@github.com:username/repo.git"'
             sh 'git push origin main'
             sh 'git status'
         }
