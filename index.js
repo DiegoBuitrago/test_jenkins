@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express()
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }))
-const port = 3000
+app.set('port', process.env.PORT || 3001);
 
 let list = [{name:'Diego', age:84}, {name:'Santiago', age:103}, {name:'Guerrero', age:65}]
 /* otro comentario local
