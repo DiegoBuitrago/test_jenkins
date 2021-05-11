@@ -2,24 +2,16 @@ const express = require('express')
 const bodyParser = require('body-parser');
 
 const app = express()
+
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }))
-app.set('port', process.env.PORT || 3001);
 
 let list = [{name:'Diego', age:84}, {name:'Santiago', age:103}, {name:'Guerrero', age:65}]
-/* otro comentario local
-dSASD
-sD
-ADS
-*/
+
 app.get('/', function (req, res) {
     res.send("hola mundo");
 });
-/* otro comentario local
-dSASD
-sD
-ADS
-*/
+
 app.get('/list', (req, res) => {
     if(list !== undefined){
         res.sendStatus(200);
@@ -27,11 +19,7 @@ app.get('/list', (req, res) => {
         res.sendStatus(500);
     }
 })
-/* otro comentario local
-dSASD
-sD
-ADS
-*/
+
 app.post('/name', (req, res) => {
     if(list.filter(person => person.name == req.body.name) !== undefined){
         res.sendStatus(200);
@@ -40,6 +28,7 @@ app.post('/name', (req, res) => {
     }
 })
 
+app.set('port', process.env.PORT || 3001);
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
