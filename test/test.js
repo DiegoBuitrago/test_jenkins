@@ -9,7 +9,7 @@ describe('Run 2', function() {
         .get('/')
         .set('Accept', 'application/text')
         .expect('Content-Type', /text/)
-        .expect('hola mundo',done)
+        .expect('hola mundo123',done)
     });
 
     it('responds with json', function(done) {
@@ -17,7 +17,7 @@ describe('Run 2', function() {
         .get('/list')
         .set('Accept', 'application/text')
         .expect('Content-Type', /text/)
-        .expect(200,done)
+        .expect(404,done)
     });
 
     it('responds with json', function(done) {
