@@ -11,7 +11,7 @@ let list = [{name:'Diego', age:84}, {name:'Santiago', age:103}, {name:'Guerrero'
 app.get('/', function (req, res) {
     res.send("hola mundo");
 });
-
+//list
 app.get('/list', (req, res) => {
     if(list !== undefined){
         res.sendStatus(200);
